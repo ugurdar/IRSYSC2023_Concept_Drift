@@ -6,7 +6,6 @@ if(length(new_packages) > 0) {
   install.packages(new_packages)
 }
 
-# Kütüphaneleri yükleme
 library(purrr)
 library(dplyr)
 library(DALEX)

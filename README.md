@@ -2,7 +2,7 @@
 
 ![](poster/poster-1.png)
 
-# References
+
 
 
 ## References

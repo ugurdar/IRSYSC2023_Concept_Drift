@@ -19,18 +19,19 @@ affiliation:
   - num: 1,2
     address: Department of Statistics, Eskisehir Technical University
 main_findings:
-  - "Using **Partial Dependence Profiles** and the Profile **Disparity Index** to Detect and Address **Data Drift** in Machine Learning Models."
+  - "Using **Partial Dependence Profiles** and the **Profile Disparity Index** to Detect and Address **Data Drift** in Machine Learning Models."
 logoleft_name: "estu.png"
 logoright_name: "conference.png"
 logocenter_name: "qrcode.png"
 output: 
   posterdown::posterdown_betterport:
-    self_contained: false
+    self_contained: true
     pandoc_args: --mathjax
     number_sections: false
     fig_caption: true
 bibliography: packages.bib
 link-citations: true
+knit: pagedown::chrome_print
 ---
 
 ```{r, include=FALSE}
@@ -44,6 +45,10 @@ options(knitr.table.format = "html")
 ```
 
 <style>
+#title {
+  font-size: 110pt;
+}
+
 #main-img-left {
   width: 22%;
 }
@@ -98,42 +103,34 @@ Here, $m$ consecutive points of the profile for the $k^{t h}$ model. The term $\
 
 
 
-# Results
+# Simulation Results
 
-Here you may have some figures to show off, bellow I have made a scatterplot with the infamous Iris dataset and I can even reference to the figure automatically like this, `Figure \@ref(fig:irisfigure)`, Figure \@ref(fig:irisfigure).
+For a classification problem, during the simulation, datasets were generated for different types of drift. These datasets were segmented using various window sizes. A model, specifically a random forest, was initially established from the first segmented data. Subsequent PDPs for the other datasets were derived based on this model. The disparities between these PDPs were quantified using the PDI values and subsequently visualized in Figure \@ref(fig:drift).
 
-```{r, irisfigure, fig.cap='Here is a caption for the figure. This can be added by using the "fig.cap" option in the r code chunk options, see this [link](https://yihui.name/knitr/options/#plots) from the legend himself, [Yihui Xie](https://twitter.com/xieyihui).', out.width="80%"}
-par(mar=c(2,2,0,1))
-plot(x = iris$Sepal.Length, y = iris$Sepal.Width,
-     col = iris$Species, pch = 19, xlab = "Sepal Length",
-     ylab = "Sepal Width")
+
+```{r,drift,fig.cap='Drift Types'}
+knitr::include_graphics("concept_drift_mean_rf.png")
 ```
 
-Maybe you want to show off some of that fancy code you spent so much time on to make that figure, well you can do that too! Just use the `echo=TRUE` option in the r code chunk options, Figure \@ref(fig:myprettycode)!
 
-```{r myprettycode, echo=TRUE, fig.cap='Boxplots, so hot right now!', fig.height=6, out.width="80%"}
-#trim whitespace
-par(mar=c(2,2,0,0))
-#plot boxplots
-boxplot(iris$Sepal.Width~iris$Species,
-        col = "#008080", 
-        border = "#0b4545",
-        ylab = "Sepal Width (cm)",
-        xlab = "Species")
-```
+# Conclusion
 
-How about a neat table of data? See, Table \@ref(tab:iristable):
+When examining the differences between PDPs for various types of data drift using the PDI metric, it was observed that as the mean of the variable $X_1$ in the dataset changes, there is a corresponding increase in the PDI values. This suggests that the alterations in the mean value of $X_1$ have a significant impact on the disparity between the PDPs, highlighting the sensitivity of PDI in capturing these variations.
 
-```{r, iristable}
-knitr::kable(
-  iris[1:15,1:5], format = "html",
-  caption = "A table made with the **knitr::kable** function.",
-  align = "c", col.names = c("Sepal <br> Length",
-                             "Sepal <br> Width",
-                             "Petal <br> Length",
-                             "Petal <br> Width",
-                             "Species"),
-  escape = FALSE)
-```
 
 # References
+
+Celik, B., Singh, P., and Vanschoren, J. 2022. “Online AutoML: An adaptive AutoML framework for online learning”. Machine Learning, 1-25.
+
+Kobylińska, K., Krzyziński, M., Machowicz, R., Adamek, M., & Biecek, P. (2023). Exploration of Rashomon Set Assists Explanations for Medical Data. arXiv preprint arXiv:2308.11446.
+
+Biecek, P., Burzykowski, T. 2021. “Explanatory model analysis”, Chapman and Hall / CRC Press, ISBN: 9780367135591.
+
+#### Acknowledgments Statements
+
+<div style="line-height: 1;">
+
+The work on this paper is financially supported by the Scientific and Technological Research Council of Türkiye under the 2210C with grant no. 1649B022303919. Additionally, support was provided by the Eskisehir Technical University Scientific Research Projects Commission under grant no. 22LÖT175.
+
+</div>
+

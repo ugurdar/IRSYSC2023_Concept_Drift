@@ -13,4 +13,8 @@
 
 - Bilge Celik, Prabhant Singh, Joaquin Vanschoren. **Online AutoML: an adaptive AutoML framework for online learning**. Machine Learning, Springer Science and Business Media LLC, 112(6): 1897--1921, 2022. [DOI](https://doi.org/10.1007%2Fs10994-022-06262-0)
 
+- Masciopinto, F. 2019. “Comparison of concept drift detectors in a health-care facility dataset to detect behavioral drifts”.
 
+- Demšar, J., and Bosnić, Z. 2018. “Detecting concept drift in data streams using model explanation”. Expert Systems with Applications,92, 546-559.
+
+- Thorne WB (2019). posterdown: An R Package Built to Generate Reproducible Conference  Posters for the Academic and Professional World Where Powerpoint and  Pages Just Won't Cut It. R package version 1.0, https://github.com/brentthorne/posterdown. 

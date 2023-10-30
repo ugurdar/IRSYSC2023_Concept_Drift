@@ -1,6 +1,6 @@
 # A NOVEL CONCEPT DRIFT DETECTION METHOD BASED ON THE PARTIAL DEPENDENCE PROFILE DISPARITY INDEX
 
-![](poster/poster-1.png)
+![](poster/poster_readme.png)
 
 
 

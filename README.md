@@ -15,6 +15,6 @@
 
 - Masciopinto, F. 2019. “Comparison of concept drift detectors in a health-care facility dataset to detect behavioral drifts”.
 
-- Demšar, J., and Bosnić, Z. 2018. “Detecting concept drift in data streams using model explanation”. Expert Systems with Applications,92, 546-559.
+- Demšar, J., and Bosnić, Z. 2018. “Detecting concept drift in data streams using model explanation”.Expert Systems with Applications,92, 546-559.
 
 - Thorne WB (2019). posterdown: An R Package Built to Generate Reproducible Conference  Posters for the Academic and Professional World Where Powerpoint and  Pages Just Won't Cut It. R package version 1.0, https://github.com/brentthorne/posterdown. 

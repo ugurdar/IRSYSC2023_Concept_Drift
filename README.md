@@ -1,5 +1,19 @@
 # A NOVEL CONCEPT DRIFT DETECTION METHOD BASED ON THE PARTIAL DEPENDENCE PROFILE DISPARITY INDEX
 
+This repository consists of the supplemental materials of a conference paper.
+
+If you use the paper or codes, please cite it:
+
+```
+@INPROCEEDINGS{,
+  author={Dar, Ugur and Cavus, Mustafa},
+  booktitle={Proceedings Book of the 7th International Researchers, Statisticians and Young Statisticians Congress}, 
+  title={A novel concept drift detection method based on the partial dependence profile disparity index}, 
+  year={2023},
+  pages={164-173},
+  ISBN={978-625-8368-61-1}}
+```
+
 ![](poster/poster_readme.png)
 
 
